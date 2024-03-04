@@ -1,0 +1,35 @@
+<resources>
+    <string name="splash_screen">SplashScreen</string>
+    <string name="main_screen">MainScreen</string>
+    <string name="search_screen">SearchScreen</string>
+    <string name="settings_screen">SettingsScreen</string>
+    <string name="favorite_screen">FavoritesScreen</string>
+    <string name="again"> Повторить снова </string>
+    <string name="details_screen">DetailsScreen</string>
+    <string name="search_movies">Поиск на ＫＩＮＯＦＹ</string>
+    <string name="search_movies_for_screen">Искать кино, Шоу, Актеры</string>
+    <string name="no_internet">Waiting for internet</string>
+    <string name="kinofy">Ｋ\nＩ\nＮ\nＯ\nＦ\nＹ</string>
+    <string name="popular">Популярные</string>
+    <string name="top">Топовые</string>
+    <string name="now_playing">Сейчас играет</string>
+    <string name="upcoming">Предстоящие</string>
+    <string name="Home">Home</string>
+    <string name="Bell">Bell</string>
+    <string name="Message">Message</string>
+    <string name="Heart">Heart</string>
+    <string name="Person">Person</string>
+    <string name="Plus">Plus</string>
+    <string name="Calendar">Calendar</string>
+    <string name="Settings">Settings</string>
+    <string name="Laptop">Laptop</string>
+    <string name="Circle">Circle</string>
+    <string name="Drop">Drop</string>
+    <string name="Leaf">Leaf</string>
+    <string name="home_txt_for_bottom_bar">Home</string>
+    <string name="search_txt_for_bottom_bar">Search</string>
+    <string name="favorite_txt_for_bottom_bar">Favorite</string>
+    <string name="settings_txt_for_bottom_bar">Settings</string>
+
+
+</resources>
