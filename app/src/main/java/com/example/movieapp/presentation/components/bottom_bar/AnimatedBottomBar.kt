@@ -94,7 +94,7 @@ fun AnimatedBottomBar(
                     modifier = Modifier.padding(top = 8.dp, start = 10.dp)
                 ) {
                     KinofyList(kinoList = uiState.kinofyPopular)
-                    TabRowForMainScreen(uiState = uiState, onNavigateToInfo = onNavigateToInfo)
+                    TabRowForMainScreen(uiState = uiState, onNavigateToInfo = onNavigateToInfo99)
                 }
             }
         }

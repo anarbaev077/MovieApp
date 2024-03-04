@@ -2,7 +2,7 @@ package com.example.movieapp.presentation.theme
 
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-const val SPLASH_SCREEN_TIME_MILLIS = 2000L
+const val SPLASH_SCREEN = 2000L
 const val EMPTY_STRING = ""
 
 /**SP**/
