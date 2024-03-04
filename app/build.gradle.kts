@@ -52,10 +52,7 @@ android {
 }
 
 dependencies {
-
-    // ORBITAL
-    implementation("com.github.skydoves:orbital:0.3.2")
-
+    
     // COLLECTIONS
     implementation("org.jetbrains.kotlinx:kotlinx-collections-immutable:0.3.7")
 

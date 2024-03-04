@@ -1,8 +1,8 @@
 package com.example.movieapp.di
 
 import com.example.movieapp.data.remote.KinofyService
-import com.example.movieapp.data.utils.Constants.API_KEI
-import com.example.movieapp.data.utils.Constants.KINOFY_URL
+import com.example.movieapp.data.links.Links.API_KEI
+import com.example.movieapp.data.links.Links.KINOFY_URL
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

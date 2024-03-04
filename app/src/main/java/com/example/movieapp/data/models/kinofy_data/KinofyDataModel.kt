@@ -1,6 +1,6 @@
 package com.example.movieapp.data.models.kinofy_data
 
-import com.example.movieapp.data.utils.Constants
+import com.example.movieapp.data.links.Links
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
@@ -32,16 +32,16 @@ data class KinofyDataModel(
 ) : Serializable {
     companion object {
         val unknown = KinofyDataModel (
-            backdropPath = Constants.EMPTY_STRING,
+            backdropPath = Links.EMPTY_STRING,
             genreIds = listOf(0),
             movieId = 0,
-            originalLanguage = Constants.EMPTY_STRING,
-            originalTitle = Constants.EMPTY_STRING,
-            overview = Constants.EMPTY_STRING,
+            originalLanguage = Links.EMPTY_STRING,
+            originalTitle = Links.EMPTY_STRING,
+            overview = Links.EMPTY_STRING,
             popularity = 0.0,
-            posterPath = Constants.EMPTY_STRING,
-            releaseDate = Constants.EMPTY_STRING,
-            title = Constants.EMPTY_STRING,
+            posterPath = Links.EMPTY_STRING,
+            releaseDate = Links.EMPTY_STRING,
+            title = Links.EMPTY_STRING,
             voteAverage = 0.0,
             voteCount = 0,
         )

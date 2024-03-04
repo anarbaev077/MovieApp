@@ -1,16 +1,23 @@
 package com.example.movieapp.presentation.screens.screen_main
 
 import android.annotation.SuppressLint
-import androidx.compose.material.ButtonDefaults
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+//noinspection UsingMaterialAndMaterial3Libraries
 import androidx.compose.material.MaterialTheme
+//noinspection UsingMaterialAndMaterial3Libraries
+import androidx.compose.material.Text
+//noinspection UsingMaterialAndMaterial3Libraries
 import androidx.compose.material.TextButton
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.example.movieapp.presentation.components.bottom_bar.BottomBarScreen
+import androidx.compose.ui.res.painterResource
+import com.example.movieapp.R
+import com.example.movieapp.presentation.components.bottom_bar.AnimatedBottomBar
 import com.example.movieapp.presentation.components.different_screens.ErrorScreen
 import com.example.movieapp.presentation.components.different_screens.LoadingScreen
 
@@ -23,23 +30,33 @@ fun MainScreen(
     onNavigateToInfo: (Int) -> Unit,
     onNavigateToSearchScreen: () -> Unit,
 ) {
-
-    TextButton(onClick = {}) {
-
-    }
-    var search by remember {
-        mutableStateOf("")
-    }
     val backgroundColor = MaterialTheme.colors.background
-    val buttonColors = ButtonDefaults.outlinedButtonColors(
-        backgroundColor = backgroundColor
-    )
-        when (uiState) {
-            is MainScreenUiState.Loading -> LoadingScreen()
-            is MainScreenUiState.Success -> {
-                BottomBarScreen(uiState = uiState, onNavigateToInfo = onNavigateToInfo)
-            }
 
-            is MainScreenUiState.Error -> ErrorScreen {}
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        TextButton(
+            modifier = modifier
+                .background(backgroundColor),
+            onClick = {}
+        ) {
+            Text(text = "")
+            Image(painterResource(id = R.drawable.unselected_icon_search), contentDescription = null)
         }
     }
+
+
+    when (uiState) {
+        is MainScreenUiState.Loading -> LoadingScreen()
+        is MainScreenUiState.Success -> {
+            AnimatedBottomBar(
+                uiState = uiState,
+                onNavigateToInfo = onNavigateToInfo
+            )
+        }
+
+        is MainScreenUiState.Error -> ErrorScreen {}
+    }
+}

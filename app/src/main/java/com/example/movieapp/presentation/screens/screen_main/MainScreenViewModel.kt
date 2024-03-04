@@ -3,11 +3,11 @@ package com.example.movieapp.presentation.screens.screen_main
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.movieapp.data.base.model.ResponseStatus
-import com.example.movieapp.data.mappers.toUi
-import com.example.movieapp.domain.use_cases.now_playing.GetCurrentKinofyNowPlayingUseCase
-import com.example.movieapp.domain.use_cases.popular.GetCurrentKinofyPopularUseCase
-import com.example.movieapp.domain.use_cases.top_rated.GetCurrentKinofyTopRateUseCase
-import com.example.movieapp.domain.use_cases.upcoming.GetCurrentKinofyUpcomUseCase
+import com.example.movieapp.data.mappers.presentation_mappers.toUi
+import com.example.movieapp.domain.use_cases.now_playing_use_cases.GetCurrentKinofyNowPlayingUseCase
+import com.example.movieapp.domain.use_cases.popular_use_cases.GetCurrentKinofyPopularUseCase
+import com.example.movieapp.domain.use_cases.top_rated_use_cases.GetCurrentKinofyTopRateUseCase
+import com.example.movieapp.domain.use_cases.upcoming_use_cases.GetCurrentKinofyUpcomUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.collections.immutable.toImmutableList
 import kotlinx.coroutines.CoroutineExceptionHandler

@@ -2,13 +2,13 @@ package com.example.movieapp.data.remote
 
 import com.example.movieapp.data.models.kinofy_data.KinofyResponseDataModel
 import com.example.movieapp.data.models.kinofy_info_data.base_details.KinofyInfo
-import com.example.movieapp.data.models.kinofy_search.search_model.KinofySearchModel
-import com.example.movieapp.data.utils.Constants.GET_MOVIE_INFO
-import com.example.movieapp.data.utils.Constants.GET_NOW_PLAYING_MOVIE
-import com.example.movieapp.data.utils.Constants.GET_POPULAR_MOVIE
-import com.example.movieapp.data.utils.Constants.GET_SEARCH
-import com.example.movieapp.data.utils.Constants.GET_TOP_RATED_MOVIE
-import com.example.movieapp.data.utils.Constants.GET_UPCOMING_MOVIE
+import com.example.movieapp.data.models.kinofy_search_data.search_model.KinofySearchModel
+import com.example.movieapp.data.links.Links.GET_MOVIE_INFO
+import com.example.movieapp.data.links.Links.GET_NOW_PLAYING_MOVIE
+import com.example.movieapp.data.links.Links.GET_POPULAR_MOVIE
+import com.example.movieapp.data.links.Links.GET_SEARCH
+import com.example.movieapp.data.links.Links.GET_TOP_RATED_MOVIE
+import com.example.movieapp.data.links.Links.GET_UPCOMING_MOVIE
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -29,7 +29,7 @@ interface KinofyService {
     @GET(GET_SEARCH)
     suspend fun getKinofySearch(
         @Query("page") page: String = GET_SEARCH,
-        @Query("page") searchQuery: String,
+        @Query("query") searchQuery: String,
     ): Response<KinofySearchModel>
 
     @GET(GET_MOVIE_INFO)

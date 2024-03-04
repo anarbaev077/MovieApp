@@ -1,18 +1,18 @@
 package com.example.movieapp.di
 
-import com.example.movieapp.domain.repository.GetKinofyRepository
+import com.example.movieapp.domain.repository.GetKinofyesRepository
 import com.example.movieapp.domain.use_case.info.DefaultGetCurrentKinofyInfoUseCase
 import com.example.movieapp.domain.use_case.info.GetCurrentKinofyInfoUseCase
 import com.example.movieapp.domain.use_case.search.DeafultKinofySearchUseCase
 import com.example.movieapp.domain.use_case.search.GetCurrentKinofySearchUseCase
-import com.example.movieapp.domain.use_cases.now_playing.DefaultGetCurrentKinofyNowPlayUseCase
-import com.example.movieapp.domain.use_cases.now_playing.GetCurrentKinofyNowPlayingUseCase
-import com.example.movieapp.domain.use_cases.popular.DefaultGetCurrentKinofyPopularUseCase
-import com.example.movieapp.domain.use_cases.popular.GetCurrentKinofyPopularUseCase
-import com.example.movieapp.domain.use_cases.top_rated.DefaultGetCurrentKinofyTopRateUseCase
-import com.example.movieapp.domain.use_cases.top_rated.GetCurrentKinofyTopRateUseCase
-import com.example.movieapp.domain.use_cases.upcoming.DefaultGetCurrentKinofyUpcomUseCase
-import com.example.movieapp.domain.use_cases.upcoming.GetCurrentKinofyUpcomUseCase
+import com.example.movieapp.domain.use_cases.now_playing_use_cases.DefaultGetCurrentKinofyNowPlayUseCase
+import com.example.movieapp.domain.use_cases.now_playing_use_cases.GetCurrentKinofyNowPlayingUseCase
+import com.example.movieapp.domain.use_cases.popular_use_cases.DefaultGetCurrentKinofyPopularUseCase
+import com.example.movieapp.domain.use_cases.popular_use_cases.GetCurrentKinofyPopularUseCase
+import com.example.movieapp.domain.use_cases.top_rated_use_cases.DefaultGetCurrentKinofyTopRateUseCase
+import com.example.movieapp.domain.use_cases.top_rated_use_cases.GetCurrentKinofyTopRateUseCase
+import com.example.movieapp.domain.use_cases.upcoming_use_cases.DefaultGetCurrentKinofyUpcomUseCase
+import com.example.movieapp.domain.use_cases.upcoming_use_cases.GetCurrentKinofyUpcomUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -24,42 +24,42 @@ class DomainModule {
 
     @Provides
     fun providesGetCurrentMoviePopularUseCase(
-        repository: GetKinofyRepository
+        repository: GetKinofyesRepository
     ): GetCurrentKinofyPopularUseCase = DefaultGetCurrentKinofyPopularUseCase(
         repository = repository
     )
 
     @Provides
     fun providesGetCurrentMovieNowPlayingUseCase(
-        repository: GetKinofyRepository
+        repository: GetKinofyesRepository
     ): GetCurrentKinofyNowPlayingUseCase = DefaultGetCurrentKinofyNowPlayUseCase(
         repository = repository
     )
 
     @Provides
     fun providesGetCurrentMovieUpcomingUseCase(
-        repository: GetKinofyRepository
+        repository: GetKinofyesRepository
     ): GetCurrentKinofyUpcomUseCase = DefaultGetCurrentKinofyUpcomUseCase(
         repository = repository
     )
 
     @Provides
     fun providesGetCurrentMovieTopRatedUseCase(
-        repository: GetKinofyRepository
+        repository: GetKinofyesRepository
     ): GetCurrentKinofyTopRateUseCase = DefaultGetCurrentKinofyTopRateUseCase(
         repository = repository
     )
 
     @Provides
     fun providesGetKinofyInfoUseCase(
-        repository: GetKinofyRepository
+        repository: GetKinofyesRepository
     ): GetCurrentKinofyInfoUseCase = DefaultGetCurrentKinofyInfoUseCase(
         repository = repository
     )
 
     @Provides
     fun providesGetKinofySearchUseCase(
-        repository: GetKinofyRepository
+        repository: GetKinofyesRepository
     ): GetCurrentKinofySearchUseCase = DeafultKinofySearchUseCase(
         repository = repository
     )

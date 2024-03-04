@@ -12,7 +12,7 @@ sealed class ScreensForNavigation(val route: String) {
 
     data object SearchScreen : ScreensForNavigation(R.string.search_screen.toString())
 
-    data object WatchListScreen : ScreensForNavigation(R.string.favorite_screen.toString())
+    data object Favorite : ScreensForNavigation(R.string.favorite_screen.toString())
 
     data object DetailsScreen : ScreensForNavigation(R.string.details_screen.toString())
 

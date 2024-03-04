@@ -2,7 +2,7 @@ package com.example.movieapp.presentation.screens.screen_main
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.Stable
-import com.example.movieapp.presentation.models.models.KinofyPresentationModel
+import com.example.movieapp.presentation.models.base_models.KinofyPresentationModel
 import kotlinx.collections.immutable.ImmutableList
 
 @Immutable
